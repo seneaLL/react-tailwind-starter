@@ -4,6 +4,7 @@ import { ActionType } from 'typesafe-actions';
 
 interface AppState {
   loading: number | null;
+  isLoggedIn: boolean;
 }
 
 /* --- ACTIONS --- */

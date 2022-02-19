@@ -9,3 +9,6 @@ export const selectGlobalDomain = (state: ApplicationRootState) =>
 
 export const selectLoading = () =>
   createSelector(selectGlobalDomain, substate => substate.loading);
+
+export const selectIsLoggedIn = () =>
+  createSelector(selectGlobalDomain, substate => substate.isLoggedIn);

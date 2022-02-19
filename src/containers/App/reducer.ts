@@ -5,6 +5,7 @@ import { ActionTypes } from './constants';
 
 export const initialState: ContainerState = {
   loading: null,
+  isLoggedIn: false,
 };
 
 type ReducerActions = ContainerActions;
@@ -13,6 +14,10 @@ const reducers: Partial<Reducers<ReducerActions, ContainerState>> = {
   [ActionTypes.SET_LOADING]: payload => state => ({
     ...state,
     loading: payload.percent,
+  }),
+  [ActionTypes.SET_LOGGED_IN]: payload => state => ({
+    ...state,
+    isLoggedIn: payload.isLoggedIn,
   }),
 };
 
